@@ -35,6 +35,7 @@ class ShoeDetailFragment : Fragment() {
             Navigation.findNavController(view)
                 .navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment())
         }
+        // All field not nullable
         binding.detailSaveBtn.setOnClickListener { view ->
             if (binding.detailShoeNameEt.text.isBlank()
                 || binding.detailShoeCompanyEt.text.isBlank()
@@ -44,10 +45,10 @@ class ShoeDetailFragment : Fragment() {
                 Toast.makeText(requireContext(), "Please fill out all!", Toast.LENGTH_SHORT).show()
             } else {
                 val shoe = Shoe(
-                    name = viewModel.shoeName?.trim() ?: "",
-                    company = viewModel.shoeCompany?.trim() ?: "",
-                    size = viewModel.shoeSize?.trim() ?: "",
-                    description = viewModel.shoeDescription?.trim() ?: ""
+                    name = ("Name: " + viewModel.shoeName?.trim()?.uppercase()),
+                    company = ("Company: " + viewModel.shoeCompany?.trim()?.uppercase()),
+                    size = ("Size: " + viewModel.shoeSize?.trim()),
+                    description = ("Description: " + viewModel.shoeDescription?.trim())
                 )
                 viewModel.addShoeItem(shoe)
                 Navigation.findNavController(view)
