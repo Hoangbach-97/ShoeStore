@@ -17,12 +17,12 @@ class ShoesViewModel : ViewModel() {
         get() = shoeData
 
     // Make sure all items not nullable
-    init {
-        shoeName = ""
-        shoeCompany = ""
-        shoeSize = ""
-        shoeDescription = ""
-    }
+//    init {
+//        shoeName = ""
+//        shoeCompany = ""
+//        shoeSize = ""
+//        shoeDescription = ""
+//    }
 
     fun addShoeItem(shoe: Shoe) {
         shoeData.postValue(shoe)

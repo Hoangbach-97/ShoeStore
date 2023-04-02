@@ -30,7 +30,6 @@ class ShoeListFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_list, container, false)
-        shoeItemBinding = DataBindingUtil.inflate(inflater, R.layout.shoe_item, container, false)
         setHasOptionsMenu(true)
 
         // Handle click go to List shoes detail
@@ -46,8 +45,9 @@ class ShoeListFragment : Fragment() {
 
     private fun addAndDisplayShoesList(shoe: Shoe) {
         // Add view : logic handle: https://stackoverflow.com/questions/2395769/how-to-programmatically-add-views-to-views
-        shoeItemBinding.shoe = shoe
-        binding.shoeListFrame.addView(shoeItemBinding.root)
+            shoeItemBinding = ShoeItemBinding.inflate(layoutInflater)
+            shoeItemBinding.shoe = shoe
+            binding.shoeListFrame.addView(shoeItemBinding.root)
     }
 
 
