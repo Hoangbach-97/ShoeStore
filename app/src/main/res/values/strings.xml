@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <string name="welcome_text">Welcome to Peter Shoes Store</string>
+    <string name="enter_your_password_text">Enter your password</string>
+    <string name="password_text">Password</string>
+    <string name="enter_your_name_text">Enter your name</string>
+    <string name="name_text">Name</string>
+    <string name="login_create_btn">Create</string>
+    <string name="login_log_in_btn">Log in</string>
+    <string name="welcome_text_content">Buying your favourite shoes \nPlease choose your shoes</string>
+    <string name="common_next_text_btn">Next</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="instruction_text_title">Please reading instruction</string>
+    <string name="instruction_steps">Go to Shoes Store \n Click on Plus button to add your favourite</string>
+    <string name="text_btn_go_to_store">Go to Store</string>
+    <string name="list_floating_btn">Add shoes</string>
+    <string name="detail_shoe_name_tv">Shoe name</string>
+    <string name="detail_enter_shoes_name_et">Enter shoes name</string>
+    <string name="detail_company_tv">Company</string>
+    <string name="detail_enter_company_name_et">Enter company\'s name</string>
+    <string name="detail_size_tv">Size</string>
+    <string name="detail_enter_shoes_size_et">Enter shoes size</string>
+    <string name="deyail_description_tv">Description</string>
+    <string name="detail_enter_shoes_description_et">Enter shoes description</string>
+    <string name="detail_cancel_btn">Cancel</string>
+    <string name="detail_save_btn">Save</string>
+    <string name="menu_log_out_text">Log out</string>
+</resources>
