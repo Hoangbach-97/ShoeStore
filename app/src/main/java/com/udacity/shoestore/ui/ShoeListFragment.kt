@@ -46,10 +46,7 @@ class ShoeListFragment : Fragment() {
 
     private fun addAndDisplayShoesList(shoe: Shoe) {
         // Add view : logic handle: https://stackoverflow.com/questions/2395769/how-to-programmatically-add-views-to-views
-        shoeItemBinding.itemNameShoe.text = shoe.name
-        shoeItemBinding.itemCompanyShoe.text = shoe.company
-        shoeItemBinding.itemSizeShoe.text = shoe.size
-        shoeItemBinding.itemDescriptionShoe.text = shoe.description
+        shoeItemBinding.shoe = shoe
         binding.shoeListFrame.addView(shoeItemBinding.root)
     }
 
