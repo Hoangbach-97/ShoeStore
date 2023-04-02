@@ -33,8 +33,8 @@ class ShoeListFragment : Fragment() {
         setHasOptionsMenu(true)
 
         // Handle click go to List shoes detail
-        binding.listFloatingBtn.setOnClickListener {
-            Navigation.findNavController(it)
+        binding.listFloatingBtn.setOnClickListener { view ->
+            Navigation.findNavController(view)
                 .navigate(ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailFragment())
         }
 
@@ -43,11 +43,13 @@ class ShoeListFragment : Fragment() {
         return binding.root
     }
 
-    private fun addAndDisplayShoesList(shoe: Shoe) {
+    private fun addAndDisplayShoesList(shoeList: List<Shoe>) {
         // Add view : logic handle: https://stackoverflow.com/questions/2395769/how-to-programmatically-add-views-to-views
+        shoeList.forEach { shoe ->
             shoeItemBinding = ShoeItemBinding.inflate(layoutInflater)
             shoeItemBinding.shoe = shoe
             binding.shoeListFrame.addView(shoeItemBinding.root)
+        }
     }
 
 

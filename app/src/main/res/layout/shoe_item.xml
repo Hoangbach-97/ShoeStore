@@ -32,6 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
+                android:textColor="@color/blue"
                 android:text="@{shoe.name}"
                 android:textSize="15sp"
                 tools:text="Shoes' name" />
@@ -41,6 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
+                android:textColor="@color/blue"
                 android:text="@{shoe.company}"
                 android:textSize="15sp"
                 tools:text="Company's name" />
@@ -49,6 +51,7 @@
                 android:id="@+id/item_size_shoe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/blue"
                 android:layout_margin="5dp"
                 android:text="@{shoe.size}"
                 android:textSize="15sp"
@@ -59,6 +62,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
+                android:textColor="@color/blue"
                 android:text="@{shoe.description}"
                 android:textSize="15sp"
                 tools:text="Description" />

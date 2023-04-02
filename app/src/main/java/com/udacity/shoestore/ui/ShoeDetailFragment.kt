@@ -31,12 +31,11 @@ class ShoeDetailFragment : Fragment() {
         binding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_detail, container, false)
         binding.shoreStoreDetailViewModel = viewModel
-
-        binding.detailCancelBtn.setOnClickListener {
-            Navigation.findNavController(it)
+        binding.detailCancelBtn.setOnClickListener { view ->
+            Navigation.findNavController(view)
                 .navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment())
         }
-        binding.detailSaveBtn.setOnClickListener {
+        binding.detailSaveBtn.setOnClickListener { view ->
             if (binding.detailShoeNameEt.text.isBlank()
                 || binding.detailShoeCompanyEt.text.isBlank()
                 || binding.detailShoeSizeEt.text.isBlank()
@@ -51,7 +50,7 @@ class ShoeDetailFragment : Fragment() {
                     description = viewModel.shoeDescription?.trim() ?: ""
                 )
                 viewModel.addShoeItem(shoe)
-                Navigation.findNavController(it)
+                Navigation.findNavController(view)
                     .navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment())
             }
         }
