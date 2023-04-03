@@ -3,11 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+
         <variable
             name="shoreStoreDetailViewModel"
             type="com.udacity.shoestore.viewmodel.ShoesViewModel" />
     </data>
 
+    <!--  Using ConstraintLayout here cause it could be easier to create name, company,
+         size, description and two buttons in horizontal instead of using nested ViewGroup LinearLayout-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">

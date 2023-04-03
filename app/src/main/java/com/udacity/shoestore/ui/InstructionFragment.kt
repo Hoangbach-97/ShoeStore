@@ -23,8 +23,7 @@ class InstructionFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val binding: FragmentInstructionBinding =
-            DataBindingUtil.inflate(inflater, R.layout.fragment_instruction, container, false)
+        val binding  = FragmentInstructionBinding.inflate(inflater, container, false)
 
         // Handle click go to List shoes screen
         binding.instructionNextBtn.setOnClickListener {

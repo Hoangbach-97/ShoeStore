@@ -11,6 +11,8 @@
             android:layout_marginTop="55dp"
             android:background="@color/blue_light_bg">
 
+            <!-- Using LinearLayout cause every time child item added
+                 it's added bellow others in vertical-->
             <LinearLayout
                 android:id="@+id/shoe_list_frame"
                 android:layout_width="match_parent"

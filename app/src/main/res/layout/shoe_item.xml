@@ -18,10 +18,12 @@
         android:layout_margin="16dp"
         app:cardBackgroundColor="@android:color/holo_green_light"
         app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
         app:cardPreventCornerOverlap="false"
-        app:cardUseCompatPadding="true"
-        app:cardElevation="4dp">
+        app:cardUseCompatPadding="true">
 
+        <!-- Using LinearLayout for all items in here cause
+        all items are just ordered in vertical-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -32,8 +34,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:textColor="@color/blue"
                 android:text="@{shoe.name}"
+                android:textColor="@color/blue"
                 android:textSize="15sp"
                 tools:text="Shoes' name" />
 
@@ -42,8 +44,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:textColor="@color/blue"
                 android:text="@{shoe.company}"
+                android:textColor="@color/blue"
                 android:textSize="15sp"
                 tools:text="Company's name" />
 
@@ -51,9 +53,9 @@
                 android:id="@+id/item_size_shoe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/blue"
                 android:layout_margin="5dp"
                 android:text="@{shoe.size}"
+                android:textColor="@color/blue"
                 android:textSize="15sp"
                 tools:text="Shoes size" />
 
@@ -62,8 +64,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:textColor="@color/blue"
                 android:text="@{shoe.description}"
+                android:textColor="@color/blue"
                 android:textSize="15sp"
                 tools:text="Description" />
         </LinearLayout>

@@ -29,32 +29,35 @@ class ShoeDetailFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding =
-            DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_detail, container, false)
+            FragmentShoeDetailBinding.inflate(inflater, container, false)
         binding.shoreStoreDetailViewModel = viewModel
         binding.detailCancelBtn.setOnClickListener { view ->
             Navigation.findNavController(view)
                 .navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment())
         }
         // All field not nullable
-        binding.detailSaveBtn.setOnClickListener { view ->
-            if (binding.detailShoeNameEt.text.isBlank()
-                || binding.detailShoeCompanyEt.text.isBlank()
-                || binding.detailShoeSizeEt.text.isBlank()
-                || binding.detailShoeDescriptionEt.text.isBlank()
-            ) {
-                Toast.makeText(requireContext(), "Please fill out all!", Toast.LENGTH_SHORT).show()
-            } else {
-                val shoe = Shoe(
-                    name = ("Name: " + viewModel.shoeName?.trim()?.uppercase()),
-                    company = ("Company: " + viewModel.shoeCompany?.trim()?.uppercase()),
-                    size = ("Size: " + viewModel.shoeSize?.trim()),
-                    description = ("Description: " + viewModel.shoeDescription?.trim())
-                )
-                viewModel.addShoeItem(shoe)
-                Navigation.findNavController(view)
-                    .navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment())
+        with(binding) {
+            detailSaveBtn.setOnClickListener { view ->
+                if (detailShoeNameEt.text.isBlank()
+                    || detailShoeCompanyEt.text.isBlank()
+                    || detailShoeSizeEt.text.isBlank()
+                    || detailShoeDescriptionEt.text.isBlank()
+                ) {
+                    Toast.makeText(requireContext(), "Please fill out all!", Toast.LENGTH_SHORT).show()
+                } else {
+                    val shoe = Shoe(
+                        name = ("Name: " + viewModel.shoeName?.trim()?.uppercase()),
+                        company = ("Company: " + viewModel.shoeCompany?.trim()?.uppercase()),
+                        size = ("Size: " + viewModel.shoeSize?.trim()),
+                        description = ("Description: " + viewModel.shoeDescription?.trim())
+                    )
+                    viewModel.addShoeItem(shoe)
+                    Navigation.findNavController(view)
+                        .navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment())
+                }
             }
         }
+
         return binding.root
     }
 

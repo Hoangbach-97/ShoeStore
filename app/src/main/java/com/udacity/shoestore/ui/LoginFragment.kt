@@ -24,8 +24,7 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val binding: FragmentLoginBinding =
-            DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false)
+        val binding = FragmentLoginBinding.inflate(inflater, container, false)
 
         // Handle click to go to Welcome screen
         binding.let { it ->
